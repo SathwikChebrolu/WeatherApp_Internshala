@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <!-- Link to TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center">
+  <!-- Header -->
+  <header class="bg-blue-500 w-full text-white p-4 text-center text-xl font-bold">Weather Dashboard</header>
+  
+  <!-- Main Content -->
+  <main class="flex-grow w-full max-w-4xl p-6">
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+      <!-- Input Section -->
+      <div class="mb-4">
+        <label for="city" class="block text-gray-700 font-bold mb-2">Enter a City Name</label>
+        <input id="city" type="text" placeholder="E.g., New York, London, Tokyo" class="w-full p-2 border rounded mb-4">
+        <button id="searchBtn" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Search</button>
+        <button id="currentLocationBtn" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 ml-2">Use Current Location</button>
+      </div>
+      
+      <!-- Dropdown for Recent Cities -->
+      <div id="recentCitiesDropdown" class="mb-4 hidden">
+        <label class="block text-gray-700 font-bold mb-2">Recently Searched Cities</label>
+        <select id="recentCities" class="w-full p-2 border rounded"></select>
+      </div>
+
+      <!-- Weather Data Section -->
+      <div id="weatherData" class="hidden">
+        <h2 class="text-2xl font-bold text-center mb-4" id="cityName"></h2>
+        <div class="flex justify-between items-center">
+          <div id="currentWeather" class="flex items-center">
+            <img id="weatherIcon" class="w-16 h-16" src="" alt="">
+            <div class="ml-4">
+              <p id="temperature" class="text-xl"></p>
+              <p id="conditions" class="text-gray-700"></p>
+            </div>
+          </div>
+          <div>
+            <p id="wind" class="text-gray-700">Wind: </p>
+            <p id="humidity" class="text-gray-700">Humidity: </p>
+          </div>
+        </div>
+
+        <!-- 5-Day Forecast -->
+        <div class="mt-6">
+          <h3 class="text-lg font-bold mb-2">5-Day Forecast</h3>
+          <div id="forecast" class="grid grid-cols-5 gap-4"></div>
+        </div>
+      </div>
+
+      <!-- Error Message Section -->
+      <div id="errorMessage" class="hidden text-red-500 mt-4"></div>
+    </div>
+  </main>
+
+  <!-- Link to external JS -->
+  <script src="script.js"></script>
+
+  <!-- Github -->
+</body>
+</html>
+
+

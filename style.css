@@ -1,0 +1,29 @@
+/* Styling for Weather Dashboard */
+
+/* General styling for the body */
+body {
+    background-color: #f3f4f6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Header styling */
+  header {
+    background-color: #3b82f6;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  /* Card styling */
+  main .bg-white {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
